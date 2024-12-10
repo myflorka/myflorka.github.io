@@ -19,7 +19,8 @@
     margin-bottom: 5px;
     font-weight: bold;
   }
-  .form-group input {
+  .form-group input,
+  .form-group textarea {
     width: calc(100% - 20px); /* Sesuaikan dengan margin tombol */
     padding: 10px;
     font-size: 16px;
@@ -30,6 +31,12 @@
     border-color: #007bff;
     outline: none;
   }
+
+  .form-group textarea {
+    resize: vertical; /* Memungkinkan textarea diubah ukurannya secara vertikal */
+    height: 100px; /* Tinggi default */
+  }
+
   .btn {
     display: block;
     width: 100%;

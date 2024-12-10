@@ -31,6 +31,7 @@ function aksiSubmit(){
         namapelanggan:getValue('namapelanggan'),
         nomorpelanggan:getValue('nomorpelanggan'),
         namapasangan:getValue('namapasangan'),
+        alamat:getValue('alamat'),
         lokasi:getValue('lokasi'),
         tanggal:getValue('tanggal'),
         paket:getValue('paket'),
