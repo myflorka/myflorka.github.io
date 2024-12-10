@@ -12,6 +12,7 @@ export function inputClient(){
     onInput('tanggal',checkInputs);
     onInput('paket',checkInputs);
     onInput('harga',checkInputs);
+    onInput('alamat',checkInputs);
 }
 
 
@@ -19,7 +20,7 @@ function checkInputs() {
     if (getValue('namapelanggan').trim() !== '' && getValue('nomorpelanggan').trim() !== '' 
     && getValue('namapasangan').trim() !== '' && getValue('lokasi').trim() !== '' 
     && getValue('paket').trim() !== '' && getValue('harga').trim() !== '' 
-    && getValue('tanggal').trim() !== '') {
+    && getValue('tanggal').trim() !== '' && getValue('alamat').trim() !== '') {
       container('tombolsubmitclient').disabled = false; // Aktifkan tombol
     } else {
       container('tombolsubmitclient').disabled = true; // Nonaktifkan tombol
