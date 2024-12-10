@@ -6,7 +6,7 @@ export function inputClient(){
         nomorpelanggan:getValue('nomorpelanggan'),
         namapasangan:getValue('namapasangan'),
         lokasi:getValue('lokasi'),
-        tanggal:getValue('tanggal')
+        tanggal:getValue('inputDate')
     }
     console.log(datapelanggan); 
     
