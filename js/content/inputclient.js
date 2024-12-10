@@ -44,7 +44,7 @@ function aksiSubmit(){
         harga:+getValue('harga')
     }
     console.log(datapelanggan); 
-    postJSON("","login",getCookie("login"),datapelanggan,runafterPostDataPelanggan)
+    postJSON("https://asia-southeast2-awangga.cloudfunctions.net/florka/data/pelanggan","login",getCookie("login"),datapelanggan,runafterPostDataPelanggan)
 }
 
 function runafterPostDataPelanggan(result){
