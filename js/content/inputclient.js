@@ -10,12 +10,15 @@ export function inputClient(){
     onInput('namapasangan',checkInputs);
     onInput('lokasi',checkInputs);
     onInput('tanggal',checkInputs);
+    onInput('paket',checkInputs);
+    onInput('harga',checkInputs);
 }
 
 
 function checkInputs() {
     if (getValue('namapelanggan').trim() !== '' && getValue('nomorpelanggan').trim() !== '' 
     && getValue('namapasangan').trim() !== '' && getValue('lokasi').trim() !== '' 
+    && getValue('paket').trim() !== '' && getValue('harga').trim() !== '' 
     && getValue('tanggal').trim() !== '') {
       container('tombolsubmitclient').disabled = false; // Aktifkan tombol
     } else {
@@ -29,7 +32,9 @@ function aksiSubmit(){
         nomorpelanggan:getValue('nomorpelanggan'),
         namapasangan:getValue('namapasangan'),
         lokasi:getValue('lokasi'),
-        tanggal:getValue('tanggal')
+        tanggal:getValue('tanggal'),
+        paket:getValue('paket'),
+        harga:getValue('harga')
     }
     console.log(datapelanggan); 
 }
