@@ -45,3 +45,11 @@
   .btn:hover {
     background-color: #0056b3;
   }
+
+  .btn:disabled {
+    background-color: #ccc; /* Latar abu-abu untuk disabled */
+    color: #666; /* Teks abu-abu */
+    cursor: not-allowed; /* Menunjukkan tombol tidak aktif */
+    opacity: 0.7; /* Transparansi */
+    border: 1px solid #aaa; /* Border abu-abu */
+  }
