@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Florka Apps</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="js/main.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -18,7 +19,7 @@
     <aside id="sidebar" class="sidebar">
         <div class="sidebar-header">
             <img src="logo.png" alt="Logo" class="sidebar-logo"> <!-- Logo -->
-            <div class="close-icon" onclick="toggleMenu()">&#10005;</div> <!-- Close button -->
+            <div class="close-icon" id="burger-menu">&#10005;</div> <!-- Close button -->
         </div>
         <nav>
             <ul>
@@ -33,9 +34,8 @@
             </ul>
         </nav>
     </aside>
-    <main>
-        <p>Welcome to Google Cloud Console Clone</p>
+    <main id="main-content">
+        <p>Welcome to My Florka Apps</p>
     </main>
-    <script src="script.js"></script>
 </body>
 </html>
