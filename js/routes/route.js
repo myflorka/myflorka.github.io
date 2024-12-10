@@ -17,16 +17,16 @@ export function handleHashChange(event) {
         case "home":
             showLoader('main-content');
             // Kode untuk value1
-            renderHTML('content', '/content/home.html', inputClient);
+            renderHTML('main-content', '/content/home.html', inputClient);
             break;
         case "inputclient":
             addCSSInHead("/css/form.css");
             showLoader('main-content');
             // Kode untuk value2
-            renderHTML('content', '/content/inputclient.html', inputClient);
+            renderHTML('main-content', '/content/inputclient.html', inputClient);
             break;
         default:
             showLoader('main-content');
-            renderHTML('content', '/content/home.html', inputClient);
+            renderHTML('main-content', '/content/home.html', inputClient);
     }
 }
