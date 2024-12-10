@@ -63,3 +63,17 @@ main {
     padding: 20px;
     margin-top: 60px;
 }
+
+
+.close-icon {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    color: #333;
+}
+
+.close-icon:hover {
+    color: #4285F4; /* Highlight effect */
+}
