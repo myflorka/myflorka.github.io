@@ -1,5 +1,11 @@
 import {getValue,onClick,container,onInput} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/element.js";
 import {validatePhoneNumber} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/validate.js";
+import {postJSON} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/api.js";
+import {getCookie} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/cookie.js";
+import {addCSSInHead} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.6/element.js";
+import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/src/sweetalert2.js';
+
+await addCSSInHead("https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.css");
 
 
 export function inputClient(){
@@ -39,4 +45,14 @@ function aksiSubmit(){
         harga:+getValue('harga')
     }
     console.log(datapelanggan); 
+    postJSON("","login",getCookie("login"),datapelanggan,runafterPostDataPelanggan)
+}
+
+function runafterPostDataPelanggan(result){
+  console.log(result);
+  if (result.status === 200){
+    Swal.fire('Berhasil', 'Data '+result.data.namapelanggan+' sudah dimasukkan dengan ID '+result.data.id, 'success');
+  }else{
+    Swal.fire(result.data.status, result.data.response, 'warning');
+  }
 }
