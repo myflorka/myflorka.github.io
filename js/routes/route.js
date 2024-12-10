@@ -1,5 +1,5 @@
 import {getHash} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/url.js";
-import {renderHTML,addCSSInHead} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/element.js";
+import {renderHTML,addCSSInHead,isCSSLoaded} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/element.js";
 import {showLoader} from "/js/routes/loader.js";
 import {inputClient} from "/js/content/inputclient.js";
 
@@ -20,8 +20,10 @@ export function handleHashChange(event) {
             renderHTML('main-content', '/content/home.html', inputClient);
             break;
         case "inputclient":
-            addCSSInHead("/css/form.css");
             showLoader('main-content');
+            if(!isCSSLoaded("/css/form.css")){
+                addCSSInHead("/css/form.css");
+            }
             // Kode untuk value2
             renderHTML('main-content', '/content/inputclient.html', inputClient);
             break;

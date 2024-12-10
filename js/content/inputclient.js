@@ -1,4 +1,4 @@
-import {getValue,onClick,container,onInput,addCSSInHead} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/element.js";
+import {getValue,onClick,container,onInput,addCSSInHead,isCSSLoaded} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/element.js";
 import {validatePhoneNumber} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/validate.js";
 import {postJSON} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/api.js";
 import {getCookie} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/cookie.js";
