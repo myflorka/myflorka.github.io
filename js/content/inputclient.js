@@ -1,11 +1,12 @@
-import {getValue,onClick,container} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/element.js";
+import {getValue,onClick,container,onInput} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/element.js";
 import {validatePhoneNumber} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/validate.js";
 
 
 export function inputClient(){
     onClick('tombolsubmitclient',aksiSubmit);
-    validatePhoneNumber(container('nomorpelanggan'));
+    onInput('nomorpelanggan',validatePhoneNumber);
 }
+
 
 function aksiSubmit(){
     const datapelanggan={
