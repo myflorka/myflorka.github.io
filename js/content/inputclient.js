@@ -34,7 +34,7 @@ function aksiSubmit(){
         lokasi:getValue('lokasi'),
         tanggal:getValue('tanggal'),
         paket:getValue('paket'),
-        harga:getValue('harga')
+        harga:+getValue('harga')
     }
     console.log(datapelanggan); 
 }
