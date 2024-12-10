@@ -56,7 +56,12 @@ function aksiSubmit(){
 function runafterPostDataPelanggan(result){
   console.log(result);
   if (result.status === 200){
-    Swal.fire('Berhasil', 'Data '+result.data.namapelanggan+' sudah dimasukkan dengan ID '+result.data.id, 'success');
+    Swal.fire('Berhasil', 'Data '+result.data.namapelanggan+' sudah dimasukkan dengan ID '+result.data.id, 
+      'success').then(({ isConfirmed }) => {
+        if (isConfirmed) {
+          window.location.href = '/';
+        }
+      });
   }else{
     Swal.fire(result.data.status, result.data.response, 'warning');
   }
