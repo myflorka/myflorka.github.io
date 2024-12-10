@@ -1,13 +1,18 @@
-import {getValue,onClick,container,onInput,addCSSInHead} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/element.js";
+import {getValue,onClick,container,onInput,addCSSInHead} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/element.js";
 import {validatePhoneNumber} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/validate.js";
 import {postJSON} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/api.js";
 import {getCookie} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/cookie.js";
 import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/src/sweetalert2.js';
 
-await addCSSInHead("https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.css");
 
 
-export function inputClient(){
+
+export async function inputClient(){
+    //menambahkan css
+    if(!isCSSLoaded("https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.css")){
+      await addCSSInHead("https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.css");
+    }
+    //tombol
     onClick('tombolsubmitclient',aksiSubmit);
     onInput('nomorpelanggan',validatePhoneNumber);
     //check kelengkapan
@@ -18,6 +23,7 @@ export function inputClient(){
     onInput('paket',checkInputs);
     onInput('harga',checkInputs);
     onInput('alamat',checkInputs);
+    
 }
 
 
