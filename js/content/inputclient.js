@@ -7,7 +7,6 @@ export function inputClient(){
     onInput('nomorpelanggan',validatePhoneNumber);
     //check kelengkapan
     onInput('namapelanggan',checkInputs);
-    onInput('nomorpelanggan',checkInputs);
     onInput('namapasangan',checkInputs);
     onInput('lokasi',checkInputs);
     onInput('tanggal',checkInputs);
