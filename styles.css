@@ -9,10 +9,21 @@ body {
 header {
     display: flex;
     align-items: center;
-    background-color: #4285F4;
+    justify-content: space-between;
+    background-color: #6a5af9; /* Adjust to your desired purple color */
     color: white;
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    flex: 1; /* Push user info to the right */
+    font-size: 18px;
+}
+
+.user-info {
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .menu-icon {
