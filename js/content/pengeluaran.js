@@ -40,14 +40,12 @@ function checkInputs() {
 
 function aksiSubmit(){
     const datapelanggan={
-        namapelanggan:getValue('namapelanggan'),
-        nomorpelanggan:getValue('nomorpelanggan'),
-        namapasangan:getValue('namapasangan'),
-        alamat:getValue('alamat'),
-        lokasi:getValue('lokasi'),
-        tanggal:getValue('tanggal'),
-        paket:getValue('paket'),
-        harga:+getValue('harga')
+        idpelanggan:getValue('idpel'),
+        jenis:getValue('jenis'),
+        objek:getValue('objek'),
+        harga:getValue('harga'),
+        keterangan:getValue('keterangan'),
+        tanggal:getValue('tanggal')
     }
     console.log(datapelanggan); 
     postJSON("https://asia-southeast2-awangga.cloudfunctions.net/florka/data/pelanggan","login",getCookie("login"),datapelanggan,runafterPostDataPelanggan)
