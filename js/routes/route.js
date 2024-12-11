@@ -3,6 +3,7 @@ import {renderHTML,addCSSInHead,isCSSLoaded} from "https://cdn.jsdelivr.net/gh/j
 import {showLoader} from "/js/routes/loader.js";
 import {inputClient} from "/js/content/inputclient.js";
 import {mainLihatClient} from "/js/content/lihatclient.js";
+import {mainpengeluaranClient} from "/js/content/pengeluaran.js";
 
 export function handleHashChange(event) {
     console.log('Hash changed!');
@@ -25,12 +26,18 @@ export function handleHashChange(event) {
             if(!isCSSLoaded("/css/form.css")){
                 addCSSInHead("/css/form.css");
             }
-            // Kode untuk value2
             renderHTML('main-content', '/content/inputclient.html', inputClient);
             break;
         case "lihatclient":
             showLoader('main-content');
             renderHTML('main-content', '/content/lihatclient.html', mainLihatClient);
+            break;
+        case "pengeluaran":
+            showLoader('main-content');
+            if(!isCSSLoaded("/css/form.css")){
+                addCSSInHead("/css/form.css");
+            }
+            renderHTML('main-content', '/content/pengeluaran.html', mainpengeluaranClient);
             break;
         default:
             showLoader('main-content');

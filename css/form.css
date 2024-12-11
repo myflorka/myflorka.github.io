@@ -20,6 +20,7 @@
     font-weight: bold;
   }
   .form-group input,
+  .form-group select,
   .form-group textarea {
     width: calc(100% - 20px); /* Sesuaikan dengan margin tombol */
     padding: 10px;
@@ -35,6 +36,17 @@
   .form-group textarea {
     resize: vertical; /* Memungkinkan textarea diubah ukurannya secara vertikal */
     height: 100px; /* Tinggi default */
+  }
+
+  .form-group .radio-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  .form-group select {
+    appearance: none;
+    background: #fff;
   }
 
   .btn {

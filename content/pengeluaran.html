@@ -1,0 +1,33 @@
+<div class="container">
+    <h2 id="judulpengeluaran">Pengeluaran Client</h2>
+    <!-- Input Text -->
+    <div class="form-group">
+      <label for="inputPackage">Jenis</label>
+      <select id="jenis">
+        <option value="">-- Jenis --</option>
+        <option value="Habis Pakai">Habis Pakai</option>
+        <option value="Inventory">Inventory</option>
+        <option value="Kemitraan">Kemitraan</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="inputText">Nama Object</label>
+      <input type="text" id="namapelanggan" placeholder="Nama Pelanggan" required>
+    </div>
+    <div class="form-group">
+      <label for="inputMoney">Nilai Harga</label>
+      <input type="number" id="harga" placeholder="Masukkan harga barang" min="0">
+    </div>
+    <div class="form-group">
+        <label for="inputText">Keterangan</label>
+        <input type="text" id="keterangan" placeholder="Info Lanjut" required>
+    </div>
+    <!-- Datepicker -->
+    <div class="form-group">
+      <label for="inputDate">Tanggal Transaksi</label>
+      <input type="date" id="tanggal" required>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="btn" disabled id="tombolsubmitpengeluaran">Submit</button>
+  </div>
