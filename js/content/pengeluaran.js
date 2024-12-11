@@ -14,7 +14,7 @@ export async function mainpengeluaranClient(){
   }
   //pengecekan param pelanggan
   const query = getQueryString();
-  if(query.idpel.trim() === ''){
+  if(query.idpel === ''){
     Swal.fire('Pelanggan Belum Dipilih', 'Silahkan pilih pelanggan dulu dari menu lihat pelanggan', 
       'warning').then(({ isConfirmed }) => {
         if (isConfirmed) {
