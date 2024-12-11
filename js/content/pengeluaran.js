@@ -46,7 +46,7 @@ function aksiSubmit(){
         tanggal:getValue('tanggal')
     }
     console.log(datapengeluaran); 
-    postJSON("https://asia-southeast2-awangga.cloudfunctions.net/florka/data/pengeluaran","login",getCookie("login"),datapelanggan,runafterPostDataPengeluaran)
+    postJSON("https://asia-southeast2-awangga.cloudfunctions.net/florka/data/pengeluaran","login",getCookie("login"),datapengeluaran,runafterPostDataPengeluaran)
 }
 
 function runafterPostDataPengeluaran(result){
