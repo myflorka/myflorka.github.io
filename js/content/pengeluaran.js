@@ -29,9 +29,9 @@ function checkInputs() {
     if (getValue('jenis').trim() !== '' && getValue('objek').trim() !== '' 
     && getValue('harga').trim() !== '' && getValue('keterangan').trim() !== '' 
     && getValue('tanggal').trim() !== '' && query.idpel.trim() !== '' ) {
-      container('tombolsubmitclient').disabled = false; // Aktifkan tombol
+      container('tombolsubmitpengeluaran').disabled = false; // Aktifkan tombol
     } else {
-      container('tombolsubmitclient').disabled = true; // Nonaktifkan tombol
+      container('tombolsubmitpengeluaran').disabled = true; // Nonaktifkan tombol
     }
   }
 
