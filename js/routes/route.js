@@ -2,6 +2,7 @@ import {getHash} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/url.js";
 import {renderHTML,addCSSInHead,isCSSLoaded} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/element.js";
 import {showLoader} from "/js/routes/loader.js";
 import {inputClient} from "/js/content/inputclient.js";
+import {mainLihatClient} from "/js/content/lihatclient.js";
 
 export function handleHashChange(event) {
     console.log('Hash changed!');
@@ -26,6 +27,10 @@ export function handleHashChange(event) {
             }
             // Kode untuk value2
             renderHTML('main-content', '/content/inputclient.html', inputClient);
+            break;
+        case "liatclient":
+            showLoader('main-content');
+            renderHTML('main-content', '/content/lihatclient.html', mainLihatClient);
             break;
         default:
             showLoader('main-content');
