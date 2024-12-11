@@ -21,7 +21,7 @@ function runAfterGetData(result){
         const row = `
             <tr>
                 <td>${index + 1}</td>
-                <td>${item.namapelangan}</td>
+                <td>${item.namapelanggan}</td>
                 <td>${item.namapasangan}</td>
                 <td>${item.nomorpelanggan}</td>
                 <td>${item.tanggal}</td>
