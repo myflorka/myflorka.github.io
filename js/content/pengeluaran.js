@@ -60,6 +60,7 @@ function runafterPostDataPengeluaran(result){
           setValue('harga','');
           setValue('keterangan','');
           setValue('tanggal','');
+          container('tombolsubmitpengeluaran').disabled = true; // Nonaktifkan tombol
         }
       });
   }else{
