@@ -28,7 +28,7 @@ export function handleHashChange(event) {
             // Kode untuk value2
             renderHTML('main-content', '/content/inputclient.html', inputClient);
             break;
-        case "liatclient":
+        case "lihatclient":
             showLoader('main-content');
             renderHTML('main-content', '/content/lihatclient.html', mainLihatClient);
             break;
