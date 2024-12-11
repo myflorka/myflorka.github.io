@@ -1,4 +1,4 @@
-import {getValue,onClick,container,onInput,addCSSInHead,isCSSLoaded} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/element.js";
+import {getValue,setValue,onClick,container,onInput,addCSSInHead,isCSSLoaded} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/element.js";
 import {postJSON} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/api.js";
 import {getQueryString} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/url.js";
 import {getCookie} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/cookie.js";
@@ -55,7 +55,11 @@ function runafterPostDataPengeluaran(result){
     Swal.fire('Berhasil', 'Data '+result.data.objek+' sudah dimasukkan dengan ID '+result.data.id, 
       'success').then(({ isConfirmed }) => {
         if (isConfirmed) {
-          window.location.href = '/';
+          setValue('jenis','');
+          setValue('objek','');
+          setValue('harga','');
+          setValue('keterangan','');
+          setValue('tanggal','');
         }
       });
   }else{
