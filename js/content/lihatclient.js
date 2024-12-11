@@ -23,7 +23,7 @@ function runAfterGetData(result){
                 <td>${index + 1}</td>
                 <td><a href="?idpel=${item.id}" target="_self">${item.namapelanggan}</a></td>
                 <td>${item.namapasangan}</td>
-                <td><a href="https://wa.me/${item.phone}" target="_blank">${item.nomorpelanggan}</a></td>
+                <td><a href="https://wa.me/${item.nomorpelanggan}" target="_blank">${item.nomorpelanggan}</a></td>
                 <td>${item.tanggal}</td>
             </tr>
         `;
