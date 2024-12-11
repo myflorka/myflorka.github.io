@@ -1,3 +1,4 @@
+import {getValue,onClick,container,onInput,addCSSInHead,isCSSLoaded} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/element.js";
 import {getJSON} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/api.js";
 import {getCookie} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/cookie.js";
 import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/src/sweetalert2.js';
