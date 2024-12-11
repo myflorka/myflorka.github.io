@@ -16,7 +16,7 @@ if (getCookie("login")){
 //check query param
 const query = getQueryString();
 if(query.idpel){
-    getJSON("https://asia-southeast2-awangga.cloudfunctions.net/florka/data/pelanggan/one","login",getCookie("login"),setTitleHeader);
+    getJSON("https://asia-southeast2-awangga.cloudfunctions.net/florka/data/pelanggan/one/"+query.idpel,"login",getCookie("login"),setTitleHeader);
 }
 
 //on kan fungsi klik di beberapa tombol
