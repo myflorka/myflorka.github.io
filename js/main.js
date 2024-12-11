@@ -1,4 +1,4 @@
-import {toggleMenu} from "/js/menu/sidebar.js";
+import {toggleMenu,closeSidebar} from "/js/menu/sidebar.js";
 import {onClick} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/element.js";
 import {onHashChange,redirect} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/url.js";
 import {handleHashChange} from "/js/routes/route.js";
@@ -15,6 +15,7 @@ if (getCookie("login")){
 
 onClick("burger-menu",toggleMenu);
 onClick("close-menu",toggleMenu);
+onClick("overlay",closeSidebar);
 onClick("logout-btn",logout);
 
 if (window.location.hash) {
