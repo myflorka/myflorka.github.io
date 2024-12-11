@@ -39,7 +39,7 @@ function checkInputs() {
     const query = getQueryString(); // Memanggil fungsi
     if (getValue('jenis').trim() !== '' && getValue('objek').trim() !== '' 
     && getValue('harga').trim() !== '' && getValue('keterangan').trim() !== '' 
-    && getValue('tanggal').trim() !== '' && query.idpel.trim() !== '' ) {
+    && getValue('tanggal').trim() !== '' && query.idpel !== '' ) {
       container('tombolsubmitpengeluaran').disabled = false; // Aktifkan tombol
     } else {
       container('tombolsubmitpengeluaran').disabled = true; // Nonaktifkan tombol
