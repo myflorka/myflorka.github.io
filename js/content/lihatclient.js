@@ -21,9 +21,9 @@ function runAfterGetData(result){
         const row = `
             <tr>
                 <td>${index + 1}</td>
-                <td>${item.namapelanggan}</td>
+                <td><a href="?idpel=${item.id}" target="_self">${item.namapelanggan}</a></td>
                 <td>${item.namapasangan}</td>
-                <td>${item.nomorpelanggan}</td>
+                <td><a href="https://wa.me/${item.phone}" target="_blank">${item.nomorpelanggan}</a></td>
                 <td>${item.tanggal}</td>
             </tr>
         `;
