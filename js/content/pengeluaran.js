@@ -1,4 +1,5 @@
-import {getValue,setValue,onClick,container,onInput,addCSSInHead,isCSSLoaded} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/element.js";
+import {getValue,setValue,onClick,container,onInput,addCSSInHead,isCSSLoaded,getAttributeValue} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js";
+import {formatRupiah} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/validate.js";
 import {postJSON} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/api.js";
 import {getQueryString,setHash} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/url.js";
 import {getCookie} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/cookie.js";
@@ -28,7 +29,7 @@ export async function mainpengeluaranClient(){
   onClick('tombolsubmitpengeluaran',aksiSubmit);
   //check kelengkapan
   onInput('jenis',checkInputs);
-  onInput('harga',checkInputs);
+  onInput('harga',formatRupiah);
   onInput('objek',checkInputs);
   onInput('tanggal',checkInputs);
   onInput('keterangan',checkInputs); 
@@ -52,7 +53,7 @@ function aksiSubmit(){
         idpelanggan:query.idpel,
         jenis:getValue('jenis'),
         objek:getValue('objek'),
-        harga:getValue('harga'),
+        harga:+getAttributeValue('harga','data-value'),
         keterangan:getValue('keterangan'),
         tanggal:getValue('tanggal')
     }
