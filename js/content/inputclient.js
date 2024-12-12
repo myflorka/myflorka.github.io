@@ -1,5 +1,5 @@
-import {getValue,onClick,container,onInput,addCSSInHead,isCSSLoaded} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.9/element.js";
-import {validatePhoneNumber} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/validate.js";
+import {getValue,onClick,container,onInput,addCSSInHead,isCSSLoaded,getAttributeValue} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js";
+import {validatePhoneNumber,formatRupiah} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/validate.js";
 import {postJSON} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/api.js";
 import {getCookie} from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.1.8/cookie.js";
 import Swal from 'https://cdn.jsdelivr.net/npm/sweetalert2@11/src/sweetalert2.js';
@@ -21,7 +21,7 @@ export async function inputClient(){
     onInput('lokasi',checkInputs);
     onInput('tanggal',checkInputs);
     onInput('paket',checkInputs);
-    onInput('harga',checkInputs);
+    onInput('harga',formatRupiah);
     onInput('alamat',checkInputs);
     
 }
@@ -47,7 +47,7 @@ function aksiSubmit(){
         lokasi:getValue('lokasi'),
         tanggal:getValue('tanggal'),
         paket:getValue('paket'),
-        harga:+getValue('harga')
+        harga:+getAttributeValue('harga','data-value')
     }
     console.log(datapelanggan); 
     postJSON("https://asia-southeast2-awangga.cloudfunctions.net/florka/data/pelanggan","login",getCookie("login"),datapelanggan,runafterPostDataPelanggan)
